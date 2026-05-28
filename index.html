@@ -1,531 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KK Novelty Cyber Cafe - Kalwa, Thane</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary: #f97316;          /* Clean Warm Orange */
-            --primary-hover: #ea580c;    /* Darker Orange */
-            --primary-light: #ffedd5;    /* Soft Orange Tint */
-            --success: #16a34a;          /* WhatsApp Green */
-            --dark: #292524;             /* Warm Charcoal */
-            --light: #fffaf7;            /* Creamy White Background */
-            --card-bg: #ffffff;
-            --text: #44403c;             /* Muted Dark Text */
-            --text-light: #78716c;       /* Soft Gray-Brown Text */
-            --shadow: 0 4px 20px -2px rgb(249 115 22 / 0.08), 0 2px 6px -1px rgb(0 0 0 / 0.04);
-            --radius: 16px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KK Novelty Cyber Cafe</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        body {
-            background-color: var(--light);
-            color: var(--text);
-            line-height: 1.6;
-        }
+<style>
 
-        /* Navbar */
-        header {
-            background: var(--card-bg);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 1px 10px rgb(0 0 0 / 0.03);
-            border-bottom: 1px solid #f1f0ee;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.25rem 2rem;
-        }
+body{
+background:#f8f3eb;
+color:#333;
+}
 
-        .logo {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: var(--dark);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
 
-        .logo i {
-            color: var(--primary);
-        }
+header{
+background:#f4e2cf;
+padding:25px 0;
+position:sticky;
+top:0;
+z-index:100;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-        nav a {
-            text-decoration: none;
-            color: var(--text-light);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
+.logo{
+font-size:28px;
+font-weight:700;
+color:#d97706;
+}
 
-        nav a:hover {
-            color: var(--primary);
-        }
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
 
-        /* Simple Hero Section - Friendly & Bright */
-        .hero {
-            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
-            color: var(--dark);
-            padding: 5rem 2rem 6rem;
-            text-align: center;
-            border-bottom: 1px solid #fed7aa;
-        }
+nav ul li a{
+text-decoration:none;
+color:#444;
+font-weight:500;
+}
 
-        .hero-content {
-            max-width: 750px;
-            margin: 0 auto;
-        }
+.hero{
+padding:80px 0;
+}
 
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: var(--dark);
-            letter-spacing: -0.03em;
-        }
+.hero-content{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+flex-wrap:wrap;
+}
 
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--text);
-            margin-bottom: 2.5rem;
-            font-weight: 400;
-        }
+.hero-text{
+flex:1;
+min-width:300px;
+}
 
-        /* Action Buttons */
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 0.85rem;
-            flex-wrap: wrap;
-        }
+.hero-text h1{
+font-size:55px;
+line-height:1.1;
+margin-bottom:20px;
+color:#c56a10;
+}
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 0.8rem 1.6rem;
-            border-radius: var(--radius);
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            border: none;
-        }
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:30px;
+color:#555;
+}
 
-        .btn-primary { background-color: var(--primary); color: white; }
-        .btn-primary:hover { background-color: var(--primary-hover); }
-        
-        .btn-whatsapp { background-color: var(--success); color: white; }
-        .btn-whatsapp:hover { background-color: #15803d; }
+.buttons{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
 
-        .btn-outline { 
-            background-color: var(--card-bg); 
-            color: var(--text); 
-            border: 1px solid #e7e5e4; 
-            box-shadow: 0 2px 4px rgb(0 0 0 / 0.02);
-        }
-        .btn-outline:hover { 
-            background-color: #fafaf9; 
-            border-color: var(--primary);
-            color: var(--primary);
-        }
+.btn{
+padding:14px 24px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
 
-        /* Info Widget Bar */
-        .status-bar {
-            background: var(--card-bg);
-            max-width: 950px;
-            margin: -2.5rem auto 0;
-            padding: 1.5rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            border: 1px solid #ffedd5;
-        }
+.call{
+background:#d97706;
+color:white;
+}
 
-        .status-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.95rem;
-        }
+.whatsapp{
+background:#25D366;
+color:white;
+}
 
-        .status-item i { color: var(--primary); font-size: 1.25rem; }
-        .badge { background: #dcfce7; color: #16a34a; padding: 3px 10px; border-radius: 30px; font-weight: 700; font-size: 0.8rem; }
+.direction{
+background:#fff;
+border:1px solid #d97706;
+color:#d97706;
+}
 
-        /* Main Container */
-        .container {
-            max-width: 1100px;
-            margin: 5rem auto;
-            padding: 0 2rem;
-        }
+.btn:hover{
+transform:translateY(-3px);
+}
 
-        section {
-            margin-bottom: 5.5rem;
-        }
+.hero-image{
+flex:1;
+min-width:300px;
+}
 
-        .section-title {
-            font-size: 1.85rem;
-            color: var(--dark);
-            margin-bottom: 2.5rem;
-            text-align: center;
-            font-weight: 700;
-        }
+.hero-image img{
+width:100%;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
 
-        /* About Section */
-        .about-box {
-            background: var(--card-bg);
-            padding: 3rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            text-align: center;
-            border: 1px solid #f5f5f4;
-        }
+.section{
+padding:80px 0;
+}
 
-        .about-box p {
-            font-size: 1.05rem;
-            color: var(--text);
-            max-width: 850px;
-            margin: 0 auto;
-        }
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#c56a10;
+}
 
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.75rem;
-        }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-        .service-card {
-            background: var(--card-bg);
-            padding: 2.25rem 1.75rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            transition: all 0.2s ease;
-            border: 1px solid #f5f5f4;
-            text-align: center;
-        }
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.06);
+transition:0.3s;
+}
 
-        .service-card:hover {
-            transform: translateY(-4px);
-            border-color: #ffedd5;
-            background: #fffdfb;
-        }
+.card:hover{
+transform:translateY(-5px);
+}
 
-        .service-icon {
-            font-size: 2.25rem;
-            color: var(--primary);
-            margin-bottom: 1.25rem;
-            background: #fff7ed;
-            width: 70px;
-            height: 70px;
-            line-height: 70px;
-            border-radius: 50%;
-            margin-left: auto;
-            margin-right: auto;
-        }
+.card h3{
+margin-bottom:12px;
+color:#d97706;
+}
 
-        .service-card h3 {
-            margin-bottom: 0.6rem;
-            color: var(--dark);
-            font-size: 1.15rem;
-        }
+.card p{
+color:#555;
+line-height:1.7;
+}
 
-        .service-card p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-        }
+.review-stars{
+color:#f59e0b;
+margin-bottom:10px;
+font-size:18px;
+}
 
-        /* Photos Section */
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-        }
+.contact-box{
+background:#f4e2cf;
+padding:40px;
+border-radius:25px;
+text-align:center;
+}
 
-        .photo-item {
-            background: #fafaf9;
-            border-radius: var(--radius);
-            height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            border: 2px dashed #e7e5e4;
-            transition: all 0.2s;
-        }
-        
-        .photo-item:hover {
-            border-color: var(--primary);
-            background: #fff7ed;
-        }
+.contact-box h2{
+margin-bottom:20px;
+color:#c56a10;
+}
 
-        .photo-item i {
-            font-size: 2.5rem;
-            color: #d6d3d1;
-        }
+.contact-box p{
+margin-bottom:12px;
+font-size:17px;
+}
 
-        /* Reviews Section */
-        .reviews-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.75rem;
-        }
+iframe{
+width:100%;
+height:400px;
+border:none;
+border-radius:25px;
+margin-top:30px;
+}
 
-        .review-card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--primary);
-        }
+footer{
+background:#ead4bc;
+padding:25px;
+text-align:center;
+margin-top:60px;
+color:#555;
+}
 
-        .stars { color: #f59e0b; margin-bottom: 0.85rem; font-size: 0.9rem; }
-        .review-card p { font-size: 0.95rem; font-style: italic; color: var(--text); }
-        .reviewer-name { font-weight: 700; color: var(--dark); margin-top: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;}
+@media(max-width:768px){
 
-        /* Contact & Map Section */
-        .contact-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-            background: var(--card-bg);
-            padding: 3rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            border: 1px solid #f5f5f4;
-        }
+.hero-text h1{
+font-size:40px;
+}
 
-        .contact-details h4 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--dark); }
-        .contact-item { display: flex; gap: 12px; margin-bottom: 1.25rem; font-size: 0.95rem; }
-        .contact-item i { color: var(--primary); margin-top: 4px; }
+nav{
+flex-direction:column;
+gap:15px;
+}
 
-        .map-box {
-            background: #fafaf9;
-            border-radius: var(--radius);
-            min-height: 280px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            border: 1px solid #e7e5e4;
-        }
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
 
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: #a8a29e;
-            padding: 3.5rem 2rem;
-            text-align: center;
-            font-size: 0.9rem;
-        }
+}
 
-        footer p { margin-bottom: 0.5rem; }
-
-        /* Responsive UI adjustments */
-        @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 1.25rem; padding: 1rem; }
-            .hero h1 { font-size: 2.1rem; }
-            .contact-layout { grid-template-columns: 1fr; padding: 1.75rem; }
-            nav ul { gap: 1.25rem; }
-            .status-bar { margin-top: -1.5rem; padding: 1rem; }
-        }
-    </style>
+</style>
 </head>
+
 <body>
 
-    <header>
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fa-solid fa-print"></i> KK Novelty Cyber Cafe
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#photos">Photos</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+<div class="container">
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>KK Novelty Cyber Cafe</h1>
-            <p>Your friendly neighborhood digital services counter in Kalwa, Thane. Clean terminals, high-quality documentation, and dependable internet access whenever you need it.</p>
-            
-            <div class="action-buttons">
-                <a href="tel:09136255355" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call</a>
-                <a href="https://maps.google.com/?q=11+BLDG,+Shop,+5,+Anand+Vihar+Complex,+Mafatlal+Colony,+Kalwa,+Thane,+Maharashtra+400605" target="_blank" class="btn btn-outline"><i class="fa-solid fa-location-dot"></i> Directions</a>
-                <a href="https://wa.me/919136255355" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-                <button onclick="shareLink()" class="btn btn-outline"><i class="fa-solid fa-share-nodes"></i> Share</button>
-                <button onclick="savePage()" class="btn btn-outline"><i class="fa-solid fa-bookmark"></i> Save</button>
-            </div>
-        </div>
-    </section>
+<nav>
 
-    <div class="status-bar">
-        <div class="status-item">
-            <i class="fa-solid fa-door-open"></i>
-            <div><strong>Status:</strong> <span class="badge">Open Daily</span></div>
-        </div>
-        <div class="status-item">
-            <i class="fa-solid fa-clock"></i>
-            <div><strong>Hours:</strong> 10:00 AM - 9:00 PM</div>
-        </div>
-        <div class="status-item">
-            <i class="fa-solid fa-map-location"></i>
-            <div><strong>Location:</strong> Anand Vihar Complex, Kalwa</div>
-        </div>
-    </div>
+<div class="logo">
+KK Novelty Cyber Cafe
+</div>
 
-    <div class="container">
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-        <section id="about" class="about-box">
-            <h2 class="section-title">About Our Cafe</h2>
-            <p>Welcome to <strong>KK Novelty Cyber Cafe</strong>. We focus on providing clean, peaceful, and straightforward technology facilities for everyday requirements. From filing official documents and online registration forms to high-resolution copies or quick internet lookups, we are structured to help you get your daily tasks done efficiently. <br><br><strong>Please Note:</strong> Our facility is dedicated entirely to office utility, documentation, and web surfing workflows. <em>We do not feature a gaming zone.</em></p>
-        </section>
+</nav>
 
-        <section id="services">
-            <h2 class="section-title">Our Document & Digital Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
-                    <h3>Secure Web Browsing</h3>
-                    <p>Clean, private desktop terminals running high-speed internet connections for research, print job setup, or online utility tasks.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                    <h3>Online Forms & Applications</h3>
-                    <p>Reliable support for submitting government forms, PAN cards, college admissions, recruitment portals, and passport applications.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-copy"></i></div>
-                    <h3>Xerox & Print Solutions</h3>
-                    <p>High-quality monochrome and rich color document prints, crisp file copies, and instant scanning to email or cloud storage.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Lamination Services</h3>
-                    <p>Durable protective heat lamination services to safeguard critical identity cards, official certificates, and school records safely.</p>
-                </div>
-            </div>
-        </section>
+</div>
+</header>
 
-        <section id="photos">
-            <h2 class="section-title">Gallery View</h2>
-            <div class="photo-grid">
-                <div class="photo-item"><i class="fa-solid fa-images"></i></div>
-                <div class="photo-item"><i class="fa-solid fa-desktop"></i></div>
-                <div class="photo-item"><i class="fa-solid fa-print"></i></div>
-            </div>
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <button class="btn btn-outline" onclick="alert('Additional gallery images are currently updates in progress!')">View All Photos</button>
-            </div>
-        </section>
+<section class="hero" id="home">
 
-        <section id="reviews">
-            <h2 class="section-title">What Customers Say</h2>
-            <div class="reviews-container">
-                <div class="review-card">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p>"The staff is very respectful and helps diligently with document printing. Rates are very reasonable and everything is kept neat."</p>
-                    <div class="reviewer-name">- R. Mishra</div>
-                </div>
-                <div class="review-card">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p>"Super fast printing and scanning. Perfect quiet environment to complete official internet desk tasks without loud gaming distractions."</p>
-                    <div class="reviewer-name">- S. Kulkarni</div>
-                </div>
-            </div>
-        </section>
+<div class="container">
 
-        <section id="contact">
-            <h2 class="section-title">Contact & Location Details</h2>
-            <div class="contact-layout">
-                <div class="contact-details">
-                    <h4>Get In Touch</h4>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>11 BLDG, Shop 5, Anand Vihar Complex, Mafatlal Colony, Kalwa, Thane, Maharashtra 400605</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>+91 91362 55355</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span>Wednesday - Tuesday: 10:00 AM to 9:00 PM</span>
-                    </div>
-                    <div style="margin-top: 2rem;">
-                        <a href="tel:09136255355" class="btn btn-primary">Call Store Location</a>
-                    </div>
-                </div>
-                
-                <div class="map-box">
-                    <i class="fa-solid fa-map-location-dot" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                    <h4 style="margin-bottom: 0.5rem;">KK Novelty Cyber Cafe Map</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 1.5rem;">Located within 10 minutes of primary transit terminals inside Anand Vihar Complex.</p>
-                    <a href="https://maps.google.com/?q=11+BLDG,+Shop,+5,+Anand+Vihar+Complex,+Mafatlal+Colony,+Kalwa,+Thane,+Maharashtra+400605" target="_blank" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Open Map Directions</a>
-                </div>
-            </div>
-        </section>
+<div class="hero-content">
 
-    </div>
+<div class="hero-text">
 
-    <footer>
-        <p>© 2026 KK Novelty Cyber Cafe. All Rights Reserved.</p>
-        <p style="font-size: 0.8rem; opacity: 0.75;">Premium Internet & Document Utility Station • Strictly No Gaming Zone</p>
-    </footer>
+<h1>Simple & Reliable Cyber Cafe Services</h1>
 
-    <script>
-        function shareLink() {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'KK Novelty Cyber Cafe',
-                    text: 'Find KK Novelty Cyber Cafe in Kalwa for premium document handling and easy browsing.',
-                    url: window.location.href,
-                }).catch(console.error);
-            } else {
-                alert('Copy or book this web link directly: ' + window.location.href);
-            }
-        }
+<p>
+KK Novelty Cyber Cafe provides internet browsing,
+printing, scanning, online forms, photo services,
+and everyday digital support in Kalwa, Thane.
+Open daily from 10 AM to 9 PM.
+</p>
 
-        function savePage() {
-            alert('Press Ctrl + D (or Command + D on Apple systems) to bookmark and save KK Novelty Cyber Cafe.');
-        }
-    </script>
+<div class="buttons">
+
+<a href="tel:09136255355" class="btn call">
+Call Now
+</a>
+
+<a href="https://wa.me/919136255355" class="btn whatsapp">
+WhatsApp
+</a>
+
+<a
+href="https://maps.google.com/?q=11+BLDG+Shop+5+Anand+Vihar+Complex+Mafatlal+Colony+Kalwa+Thane+Maharashtra+400605"
+target="_blank"
+class="btn direction">
+Directions
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="services">
+
+<div class="container">
+
+<h2 class="section-title">
+Services
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Internet Browsing</h3>
+<p>Fast internet access for study, office work, and online tasks.</p>
+</div>
+
+<div class="card">
+<h3>Printing</h3>
+<p>Document printing and photocopy services with quick support.</p>
+</div>
+
+<div class="card">
+<h3>Scanning</h3>
+<p>Easy scanning and upload service for documents and IDs.</p>
+</div>
+
+<div class="card">
+<h3>Online Forms</h3>
+<p>Support for registrations, applications, and online forms.</p>
+</div>
+
+<div class="card">
+<h3>Photo Services</h3>
+<p>Photo printing and document image support.</p>
+</div>
+
+<div class="card">
+<h3>Email & Downloads</h3>
+<p>Browsing, email access, downloads, and basic computer help.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="reviews">
+
+<div class="container">
+
+<h2 class="section-title">
+Customer Reviews
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="review-stars">
+★★★★★
+</div>
+
+<h3>Amit</h3>
+
+<p>
+Very helpful and fast service.
+Good place for printing and online forms.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="review-stars">
+★★★★★
+</div>
+
+<h3>Priya</h3>
+
+<p>
+Clean and simple cyber cafe with smooth internet service.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="review-stars">
+★★★★☆
+</div>
+
+<h3>Rohan</h3>
+
+<p>
+Good support for scanning and online work.
+Easy location in Kalwa.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>Contact & Location</h2>
+
+<p>
+📍 11 BLDG, Shop 5, Anand Vihar Complex,
+Mafatlal Colony, Kalwa, Thane,
+Maharashtra 400605
+</p>
+
+<p>
+🕒 Open Daily: 10:00 AM – 9:00 PM
+</p>
+
+<p>
+📞 091362 55355
+</p>
+
+<div class="buttons" style="justify-content:center; margin-top:25px;">
+
+<a href="tel:09136255355" class="btn call">
+Call
+</a>
+
+<a href="https://wa.me/919136255355" class="btn whatsapp">
+WhatsApp
+</a>
+
+<a
+href="https://maps.google.com/?q=11+BLDG+Shop+5+Anand+Vihar+Complex+Mafatlal+Colony+Kalwa+Thane+Maharashtra+400605"
+target="_blank"
+class="btn direction">
+Directions
+</a>
+
+</div>
+
+<iframe
+src="https://maps.google.com/maps?q=11%20BLDG%20Shop%205%20Anand%20Vihar%20Complex%20Mafatlal%20Colony%20Kalwa%20Thane%20Maharashtra%20400605&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 KK Novelty Cyber Cafe • Kalwa, Thane
+</footer>
+
 </body>
-                  </html>
+</html>
                   
