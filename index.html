@@ -1,474 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KK Novelty Cyber Cafe</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#f8f3eb;
-color:#333;
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-header{
-background:#f4e2cf;
-padding:25px 0;
-position:sticky;
-top:0;
-z-index:100;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-size:28px;
-font-weight:700;
-color:#d97706;
-}
-
-nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-}
-
-nav ul li a{
-text-decoration:none;
-color:#444;
-font-weight:500;
-}
-
-.hero{
-padding:80px 0;
-}
-
-.hero-content{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:50px;
-flex-wrap:wrap;
-}
-
-.hero-text{
-flex:1;
-min-width:300px;
-}
-
-.hero-text h1{
-font-size:55px;
-line-height:1.1;
-margin-bottom:20px;
-color:#c56a10;
-}
-
-.hero-text p{
-font-size:18px;
-line-height:1.8;
-margin-bottom:30px;
-color:#555;
-}
-
-.buttons{
-display:flex;
-flex-wrap:wrap;
-gap:15px;
-}
-
-.btn{
-padding:14px 24px;
-border-radius:12px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-
-.call{
-background:#d97706;
-color:white;
-}
-
-.whatsapp{
-background:#25D366;
-color:white;
-}
-
-.direction{
-background:#fff;
-border:1px solid #d97706;
-color:#d97706;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-.hero-image{
-flex:1;
-min-width:300px;
-}
-
-.hero-image img{
-width:100%;
-border-radius:25px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-.section{
-padding:80px 0;
-}
-
-.section-title{
-text-align:center;
-font-size:40px;
-margin-bottom:50px;
-color:#c56a10;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,0.06);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card h3{
-margin-bottom:12px;
-color:#d97706;
-}
-
-.card p{
-color:#555;
-line-height:1.7;
-}
-
-.review-stars{
-color:#f59e0b;
-margin-bottom:10px;
-font-size:18px;
-}
-
-.contact-box{
-background:#f4e2cf;
-padding:40px;
-border-radius:25px;
-text-align:center;
-}
-
-.contact-box h2{
-margin-bottom:20px;
-color:#c56a10;
-}
-
-.contact-box p{
-margin-bottom:12px;
-font-size:17px;
-}
-
-iframe{
-width:100%;
-height:400px;
-border:none;
-border-radius:25px;
-margin-top:30px;
-}
-
-footer{
-background:#ead4bc;
-padding:25px;
-text-align:center;
-margin-top:60px;
-color:#555;
-}
-
-@media(max-width:768px){
-
-.hero-text h1{
-font-size:40px;
-}
-
-nav{
-flex-direction:column;
-gap:15px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="container">
-
-<nav>
-
-<div class="logo">
-KK Novelty Cyber Cafe
-</div>
-
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#reviews">Reviews</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</nav>
-
-</div>
-</header>
-
-<section class="hero" id="home">
-
-<div class="container">
-
-<div class="hero-content">
-
-<div class="hero-text">
-
-<h1>Simple & Reliable Cyber Cafe Services</h1>
-
-<p>
-KK Novelty Cyber Cafe provides internet browsing,
-printing, scanning, online forms, photo services,
-and everyday digital support in Kalwa, Thane.
-Open daily from 10 AM to 9 PM.
-</p>
+<!-- CONTACT BUTTONS -->
 
 <div class="buttons">
 
-<a href="tel:09136255355" class="btn call">
-Call Now
+<a class="btn call" href="tel:09136255355">
+📞 Call Now
 </a>
 
-<a href="https://wa.me/919136255355" class="btn whatsapp">
-WhatsApp
+<a class="btn whatsapp"
+href="https://wa.me/919136255355"
+target="_blank">
+💬 WhatsApp
 </a>
 
-<a
+<a class="btn direction"
 href="https://maps.google.com/?q=11+BLDG+Shop+5+Anand+Vihar+Complex+Mafatlal+Colony+Kalwa+Thane+Maharashtra+400605"
-target="_blank"
-class="btn direction">
-Directions
+target="_blank">
+📍 Directions
+</a>
+
+<a class="btn email"
+href="mailto:patrakuldip808@gmail.com">
+✉ Email
 </a>
 
 </div>
 
-</div>
 
-<div class="hero-image">
+<!-- CONTACT SECTION -->
 
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+<section class="contact">
 
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="services">
-
-<div class="container">
-
-<h2 class="section-title">
-Services
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Internet Browsing</h3>
-<p>Fast internet access for study, office work, and online tasks.</p>
-</div>
-
-<div class="card">
-<h3>Printing</h3>
-<p>Document printing and photocopy services with quick support.</p>
-</div>
-
-<div class="card">
-<h3>Scanning</h3>
-<p>Easy scanning and upload service for documents and IDs.</p>
-</div>
-
-<div class="card">
-<h3>Online Forms</h3>
-<p>Support for registrations, applications, and online forms.</p>
-</div>
-
-<div class="card">
-<h3>Photo Services</h3>
-<p>Photo printing and document image support.</p>
-</div>
-
-<div class="card">
-<h3>Email & Downloads</h3>
-<p>Browsing, email access, downloads, and basic computer help.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="reviews">
-
-<div class="container">
-
-<h2 class="section-title">
-Customer Reviews
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<div class="review-stars">
-★★★★★
-</div>
-
-<h3>Amit</h3>
-
-<p>
-Very helpful and fast service.
-Good place for printing and online forms.
-</p>
-
-</div>
-
-<div class="card">
-
-<div class="review-stars">
-★★★★★
-</div>
-
-<h3>Priya</h3>
-
-<p>
-Clean and simple cyber cafe with smooth internet service.
-</p>
-
-</div>
-
-<div class="card">
-
-<div class="review-stars">
-★★★★☆
-</div>
-
-<h3>Rohan</h3>
-
-<p>
-Good support for scanning and online work.
-Easy location in Kalwa.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="contact">
-
-<div class="container">
+<h2>Contact Us</h2>
 
 <div class="contact-box">
 
-<h2>Contact & Location</h2>
+<p><strong>KK Novelty Cyber Cafe</strong></p>
 
 <p>
 📍 11 BLDG, Shop 5, Anand Vihar Complex,
-Mafatlal Colony, Kalwa, Thane,
-Maharashtra 400605
+Mafatlal Colony, Kalwa,
+Thane, Maharashtra 400605
 </p>
 
 <p>
-🕒 Open Daily: 10:00 AM – 9:00 PM
+📞 Phone:
+<a href="tel:09136255355">
+09136255355
+</a>
 </p>
 
 <p>
-📞 091362 55355
+💬 WhatsApp:
+<a href="https://wa.me/919136255355">
+09136255355
+</a>
 </p>
 
-<div class="buttons" style="justify-content:center; margin-top:25px;">
-
-<a href="tel:09136255355" class="btn call">
-Call
+<p>
+✉ Email:
+<a href="mailto:patrakuldip808@gmail.com">
+patrakuldip808@gmail.com
 </a>
+</p>
 
-<a href="https://wa.me/919136255355" class="btn whatsapp">
-WhatsApp
-</a>
-
-<a
-href="https://maps.google.com/?q=11+BLDG+Shop+5+Anand+Vihar+Complex+Mafatlal+Colony+Kalwa+Thane+Maharashtra+400605"
-target="_blank"
-class="btn direction">
-Directions
-</a>
-
-</div>
-
-<iframe
-src="https://maps.google.com/maps?q=11%20BLDG%20Shop%205%20Anand%20Vihar%20Complex%20Mafatlal%20Colony%20Kalwa%20Thane%20Maharashtra%20400605&t=&z=15&ie=UTF8&iwloc=&output=embed">
-</iframe>
-
-</div>
+<p>
+🕙 Opening Hours:
+10:00 AM – 9:00 PM
+</p>
 
 </div>
 
 </section>
 
-<footer>
-© 2026 KK Novelty Cyber Cafe • Kalwa, Thane
-</footer>
 
-</body>
-</html>
-                  
+<!-- CSS -->
+
+<style>
+
+.email{
+background:#ff8c00;
+color:white;
+}
+
+.contact{
+padding:80px 20px;
+background:#fff7ed;
+text-align:center;
+}
+
+.contact h2{
+font-size:36px;
+margin-bottom:30px;
+color:#d97706;
+}
+
+.contact-box{
+max-width:700px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+line-height:2;
+}
+
+.contact-box a{
+color:#d97706;
+text-decoration:none;
+font-weight:600;
+}
+
+</style>
